@@ -21,3 +21,9 @@ tablaIDEAM = data.frame(id = substr(Archivo_crudo$V1, 0, 1), cod = substr(Archiv
            )
            
 tablaIDEAM[tablaIDEAM == 99999] = NA
+
+IDEAM_Cundinamarca2 = tablaIDEAM
+
+for(i in 40:62){
+    IDEAM_Cundinamarca2[,i] = as.numeric(as.character(IDEAM_Cundinamarca2[,i]))
+    }
